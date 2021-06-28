@@ -25,13 +25,10 @@ public class LoginController {
 	
 	@RequestMapping("/login")
 	public String login(
-//			@RequestParam("userName") String userName,
-//			@RequestParam("password") String password,
 			LoginForm form,
 			Model m) {
 		
 		String message = "Welcome! ";
-//		List<User> users = userRepos.findByUserNameAndPassword(userName, password);
 		List<User> users = userRepos.findByUserNameAndPassword(form.getUserName(), form.getPassword());
 		if (users.size() > 0) {
 			User user = users.get(0);
