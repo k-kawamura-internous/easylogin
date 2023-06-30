@@ -38,7 +38,7 @@ public class LoginController {
 			message += "guest";
 		}
 		
-		m.addAttribute("message", message);
+//		m.addAttribute("message", message);
 		return "login";
 	}
 }
